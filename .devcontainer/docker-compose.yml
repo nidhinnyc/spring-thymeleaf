@@ -1,29 +1,31 @@
-
 version: '3.8'
 
 services:
   app:
     container_name: springboot-app
-    build: 
+    build:
       context: .
-      dockerfile: Dockerfile        
+      dockerfile: Dockerfile
     volumes:
       - ../..:/workspaces:cached
     ports:
-      - "8070:8070"
+      - '8070:8070'
     command: /bin/sh -c "while sleep 1000; do :; done"
     environment:
       - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
     depends_on:
       - db
+    links:
+      - db
   db:
     image: mysql:8.0
     container_name: mysql-db
+    privileged: true
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: hospitalmanagement
     ports:
-      - "3306:3306"
+      - '3306:3306'
     volumes:
       - db-data:/var/lib/mysql
 
