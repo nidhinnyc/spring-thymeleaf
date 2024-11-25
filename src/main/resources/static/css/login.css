@@ -1,0 +1,53 @@
+
+.back {
+    background-image: url("/images/log.jpg");
+    width: 1515px;
+    height: 700px;
+    background-size: cover;
+}
+
+.top {
+    background-color:rgb(44, 44, 82);
+    width: 1495px;
+    height: 50px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.frm {
+    background-color: rgb(44, 44, 82);
+    margin-left: 550px;
+    /* align-items: center; */
+    width: 300px;
+    height: 350px;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.frm1 {
+    position: absolute;
+    left: 590px;
+    bottom: 315px;
+}
+
+.frm2 {
+    position: absolute;
+    left: 595px;
+    bottom: 270px;
+}
+.frm3 {
+    position: absolute;
+    left: 595px;
+    bottom: 225px;
+}
+.butt {
+    position: absolute;
+    left: 720px;
+    bottom: 125px;
+    background-color: white;
+    color: blackS;
+    display: inline;
+    border: 0px;
+}

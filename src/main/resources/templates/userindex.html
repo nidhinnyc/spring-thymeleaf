@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+</head>
+
+<body>
+    <div align="center">
+        <h1>Users list</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <!-- Table headers -->
+                    <th>User name</th>
+                    <th>Password</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Iterating over each user in the 'listusers' variable -->
+                <tr th:each="user : ${listusers}">
+                    <td th:text="${user.User_name}"></td>
+                    <td th:text="${user.Password}"></td>
+                    <td th:text="${user.Role}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

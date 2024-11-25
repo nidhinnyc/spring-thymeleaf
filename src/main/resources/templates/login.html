@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crescent Medical Hospital</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+    <div class="back">
+        <!-- Top Navigation Bar -->
+        <div class="top">
+            <a href="/contact">
+                <span style="color: azure; display: flex; justify-content: flex-end; margin-right: 20px;">Contact Us</span>
+            </a>
+        </div>
+
+        <!-- Logo and Headings -->
+        <h1 class="header-title">
+            <b>CRESCENT MEDICAL HOSPITAL</b>
+        </h1>
+        <h2 class="header-subtitle">
+            <i>Leads you back to an impactful life...</i>
+        </h2>
+
+        <!-- Login Form -->
+        <div class="frm">
+            <img src="/images/logo2.png" alt="Hospital Logo" class="logo-img">
+            <form method="POST" action="/login"> <!-- Adjust action based on your backend -->
+                <div class="frm1">
+                    <label for="fname">Username</label>
+                    <input type="text" id="fname" name="fname" required>
+                </div>
+                <div class="frm2">
+                    <label for="pword">Password</label>
+                    <input type="password" id="pword" name="pword" required>
+                </div>
+                <div class="frm3">
+                    <label for="userType">Select User Type:</label>
+                    <select name="userType" id="userType" required>
+                        <option value="admin">Administrator</option>
+                        <option value="doctor">Doctor</option>
+                        <option value="pharmacist">Pharmacist</option>
+                    </select>
+                </div>
+                <div class="butt">
+                    <button type="submit" style="background-color:rgb(44, 44, 82); color: white;">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // This function can be removed if you are using form submission.
+        function myfun() {
+            var num = document.getElementById("fname").value;
+            var pass = document.getElementById("pword").value;
+            if (!num || !pass) {
+                alert("Please provide both username and password.");
+            } else {
+                if (confirm("Proceed further?")) {
+                    alert("Proceeding...");
+                } else {
+                    alert("Cancelled.");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
